@@ -16,17 +16,31 @@ import useTyper from "./hooks/use-typer";
 import { cn } from "@/lib/utils";
 
 const Typer = () => {
-  const { currentWord, onChange, value, verifyWord, wordsList } = useTyper();
+  const {
+    currentWord,
+    onChange,
+    resetGame,
+    stats,
+    value,
+    verifyWord,
+    wordsList,
+  } = useTyper();
 
   return (
     <div className=" max-w-2xl py-10 flex flex-col gap-5 items-start">
       <WordsSelect />
       <Card className="w-full">
-        <CardHeader className="flex flex-col items-end">
+        <CardHeader className="flex flex-col items-end text-right">
           <CardTitle>Stats</CardTitle>
-          <CardDescription>
-            Type all the words to get your stats.
-          </CardDescription>
+          {stats ? (
+            <CardDescription>
+              WPM: {stats.wpm} ACC: {stats.acc}%
+            </CardDescription>
+          ) : (
+            <CardDescription>
+              Type all the words to get your stats.
+            </CardDescription>
+          )}
         </CardHeader>
         <CardContent>
           {wordsList.map(({ word, isCorrect }, i) => (
@@ -49,7 +63,7 @@ const Typer = () => {
             placeholder="Type here"
             onKeyDown={verifyWord}
           />
-          <Button>
+          <Button onClick={resetGame}>
             <RefreshCcw className="size-4" />
           </Button>
         </CardFooter>
