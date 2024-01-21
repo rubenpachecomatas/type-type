@@ -90,6 +90,20 @@ const config = {
             borderColor: "transparent",
           },
         },
+        "dark-blink": {
+          "0%": {
+            borderColor: "white",
+          },
+          "50%": {
+            borderColor: "white",
+          },
+          "51%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "transparent",
+          },
+        },
         "fade-in": {
           "0%": {
             opacity: "0",
@@ -103,6 +117,8 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         typing: "typing 2s steps(8) infinite alternate, blink 1s infinite",
+        "dark-typing":
+          "typing 2s steps(8) infinite alternate, dark-blink 1s infinite",
         "fade-in": "fade-in 0.3s ease-in",
       },
     },
