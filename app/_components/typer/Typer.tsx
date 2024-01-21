@@ -3,10 +3,8 @@
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +12,7 @@ import { RefreshCcw } from "lucide-react";
 import WordsSelect from "./_components/WordsSelect";
 import useTyper from "./hooks/use-typer";
 import TyperText from "./_components/TyperText";
+import Stats from "./_components/Stats";
 
 const Typer = () => {
   const {
@@ -31,16 +30,7 @@ const Typer = () => {
       <WordsSelect />
       <Card className="w-full">
         <CardHeader className="flex flex-col items-end text-right">
-          <CardTitle>Stats</CardTitle>
-          {stats ? (
-            <CardDescription>
-              WPM: {stats.wpm} ACC: {stats.acc}%
-            </CardDescription>
-          ) : (
-            <CardDescription>
-              Type all the words to get your stats.
-            </CardDescription>
-          )}
+          <Stats stats={stats} />
         </CardHeader>
         <CardContent>
           <TyperText active={currentWord} data={wordsList} />

@@ -9,7 +9,7 @@ const onest = Onest({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Type Type",
-  description: "Practice your typings skills in this cozzy typer!",
+  description: "Practice your typings skills in this cozy typer!",
 };
 
 export default function RootLayout({
