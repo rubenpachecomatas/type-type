@@ -42,7 +42,7 @@ const Typer = () => {
             placeholder="Type here"
             onKeyDown={verifyWord}
           />
-          <Button onClick={resetGame}>
+          <Button aria-label="Restart" onClick={resetGame}>
             <RefreshCcw className="size-4" />
           </Button>
         </CardFooter>

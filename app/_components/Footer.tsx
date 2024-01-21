@@ -15,8 +15,8 @@ const Footer = () => (
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <a target="_blank" href={GITHUB}>
-            <Button size="icon" variant="ghost">
+          <a aria-label="Github" target="_blank" href={GITHUB}>
+            <Button aria-label="Github" size="icon" variant="ghost">
               <Github />
             </Button>
           </a>

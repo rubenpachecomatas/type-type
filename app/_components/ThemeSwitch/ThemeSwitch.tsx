@@ -12,7 +12,7 @@ export const ThemeSwitch = () => {
   return (
     <div className="flex gap-2 absolute top-8 right-8 animate-fade-in">
       <Sun />
-      <Switch checked={isDarkTheme} onCheckedChange={onThemeChange} />
+      <Switch aria-label="Switch theme" checked={isDarkTheme} onCheckedChange={onThemeChange} />
       <Moon />
     </div>
   );
