@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./_components/Providers";
+import { Analytics } from '@vercel/analytics/react';
 
 const onest = Onest({ subsets: ["latin"] });
 
@@ -19,7 +21,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className={onest.className}>{children}</body>
+      <body className={onest.className}>
+        <Providers>{children}</Providers>
+        <Analytics />
+      </body>
     </html>
   );
 }
