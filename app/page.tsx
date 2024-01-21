@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center py-24 px-14">
       <ThemeSwitch />
       <Header />
-      <section>
+      <section className="flex w-full justify-center">
         <Typer />
       </section>
     </main>
